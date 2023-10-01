@@ -1,0 +1,1062 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif; */
+
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* .........header section........... */
+.header-section{
+    height: 100px;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+}
+.header-section .container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.header-logo a img{
+    width: 100%;
+}
+
+.header-menu .menu{
+    display: flex;
+    /* cursor: pointer;
+    color: bisque; */
+}
+
+.menu-icon{
+    display: none;
+}
+
+
+.menu-icon i{
+    font-size:28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.header-menu .menu li a{
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    transition: 0.4s;
+    
+}
+
+.header-menu .menu li a:hover{
+    cursor: pointer;
+    color: burlywood;
+    font-size: 110%;
+}
+    
+.header-menu .menu li:last-child a{
+    padding-right: 0;
+}
+
+
+
+    
+
+
+
+/* ............banner section.............. */
+.banner-section{
+    background-image: url(./image/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 260px;
+    padding-bottom: 160px;
+}
+
+.banner-section .container-2 h1{
+    font-size:65px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    line-height: 68px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 150px;
+
+}
+
+.banner-section .container-2 p{
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    padding: 0 185px;
+    
+}
+
+.banner-section .container-2 a{
+    font-size: 13px;
+    background-color:rgb(163, 48,48) ;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px 45px;
+    color: white;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+   transform: translateX(-50%);
+   text-transform: uppercase;
+   transition: 0.4s;
+}
+
+.banner-section .container-2 a:hover{
+    cursor: pointer;
+    font-size: 120%;
+}
+
+/* ..............service section........... */
+.service-section{
+    padding: 120px 0px 125px 0px ;
+}
+
+.service-section .container{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    row-gap: 70px;
+    
+}
+
+.service-section .container .service-card{
+    max-width:30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-section .container .service-card a img{
+    width: 100%;
+
+}
+
+.service-section .container .service-card h3{
+    font-family:'Raleway', sans-serif ;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.service-section .container .service-card p{
+    font-family:'Raleway', sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    
+    color: rgb(71, 74,78) ;
+}
+/* /* .............Gallery section.............. */
+
+.gallery-section{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1px;
+    row-gap: 1px;
+    /* background: ; */
+}
+
+
+.gallery-section .gallery-item{
+    max-width: calc(25% - 1px);
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+}
+
+.gallery-section .gallery-item img{
+    width: 100%;
+    height: 100%;
+} 
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    transition: 0.6s background ease-in-out;
+}
+
+.gallery-section .gallery-item:hover .overlay{
+    background: rgba(139, 50, 48,0.8);
+}
+
+.gallery-content{
+    z-index: 9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.4s all ease-in-out;
+}
+.gallery-content h3{
+    font-family:'Raleway', sans-serif ;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+}
+.gallery-content p{
+    font-family:'Raleway', sans-serif ;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+
+.gallery-section .gallery-item:hover .gallery-content{
+    opacity: 1;
+}
+
+/* ...............team section.................  */
+
+.team-section{
+    padding: 100px 0 ;
+
+}
+
+.team-section .container{
+    display:flex ;
+    justify-content: space-between;
+}
+
+.team-member{
+    max-width: calc(25% - 22.5px);
+}
+
+.team-section .container .team-member img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.team-member h3, .team-member p{
+    font-family:'Raleway', sans-serif ;
+
+}
+.team-member h3{
+    font-size: 22px;
+    color:#57595C;
+    margin-top: 30px;
+    margin-bottom: 16px;
+
+}
+.team-member p:first-of-type{
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #E84545;
+}
+.team-member p:last-of-type{
+    font-size: 14px;
+    color: #787D84;
+    margin-top: 30px;
+    margin: 30px 0;
+}
+.team_social-icon{
+    display: flex;
+    column-gap: 4px
+
+}
+
+.team_social-icon a{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #8C8E8F;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.team_social-icon a:hover{
+    cursor: pointer;
+    font-size: 180%;
+}
+
+.team_social-icon a i {
+    color: #77797A;
+}
+
+/* ...............Testimonial Section......... */
+.testimonial-section{
+    background-color: #32202C;
+
+    /* font-family: 'Cardo', serif; */
+}
+
+
+
+.testimonial-content{
+    display: flex;
+}
+.tc-item{
+    width: 50%;
+}
+.testimonial-image img{
+    width: 100%;
+    height: 100%;
+}
+.testimonial-text{
+    padding-top: 112px;
+    padding-left: 80px;
+}
+
+.testimonial-text p:first-of-type{
+    font-size: 36px;
+    font-family: 'Cardo', serif;
+    color: white;
+    padding-right:110px;
+}
+
+.testimonial-text p:last-of-type{
+    font-size: 13px;
+    font-weight: 700;
+    font-family:'Raleway', sans-serif ;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 44px;
+}
+
+.indicator{
+    display: flex;
+    margin-top: 60px;
+    margin-left: 200px;
+    column-gap: 8px;
+}
+
+.indicator-item{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #463842;
+    margin-bottom: 50px;
+}
+
+.indicator .indicator-item:nth-child(2){
+    background-color: white;
+}
+
+/* ..............download section...............  */
+
+.download-section .container{
+    width: 900px;
+    
+    display: block;
+    text-align: center;
+    margin-bottom: 100px;
+
+}
+
+.download-section .container h3{
+    font-size: 28px;
+    font-weight: 300;
+    font-family:'Raleway', sans-serif ;
+    margin-top: 100px;
+    
+
+}
+
+.download-section .container p{
+    font-size:13px;
+    font-weight: 500;
+    font-family:'Raleway', sans-serif ;
+    margin-top: 25px;
+    
+
+}
+.download-section .container a{
+    border-radius: 1px;
+    background-color: #E84545;
+    padding: 18px 80px;
+    font-family:'Raleway', sans-serif ;  
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 40px;  
+    transition: 0.4s;
+}
+.download-section .container a:hover{
+    cursor: pointer;
+    font-size: 120%;
+}
+/* ..............about section...........  */
+.about-section{
+    background-color:#23253C ;
+    
+}
+.about-section .container{
+    width: 1200px;
+    display: flex;
+    padding-top: 70px;
+    padding-bottom: 106px;
+    
+}
+.about-section .container .location{
+    width: 160px;
+   
+    text-align: center;
+    margin-left: 150px;
+ }
+.about-section .container .location h3{
+    font-size: 14px;
+    font-weight: 400;
+    font-family:'Raleway', sans-serif ;
+    color: white;
+    text-transform: uppercase;
+}
+.about-section .container .location p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family:'Raleway', sans-serif ;
+    color: #696A71;
+    margin-top: 22px;
+    }
+.about-section .container .share{
+    width: 380px;
+   
+    text-align: center;
+    margin-left: 100px;
+    
+}
+
+.about-section .container .share h3{
+    font-size: 14px;
+    font-weight: 400;
+    font-family:'Raleway', sans-serif ;
+    color: white;
+    text-transform: uppercase;    
+    
+}
+
+.about-section .container .share a{
+    
+    height: 40px;
+    width: 40px;
+    border: 2px solid #e8ecee;
+    padding-top: 10px;
+    padding-left: 3px;
+    margin-top: 22px;
+}
+
+.about-section .container .share a i{
+    color: #fff;
+    
+}
+
+.about-section .container .about{
+    width: 400px;
+    
+    text-align: center;
+
+}
+
+.about-section .container .about h3{
+    font-size: 14px;
+    font-weight: 400;
+    font-family:'Raleway', sans-serif ;
+    color: white;
+    text-transform: uppercase;
+}
+.about-section .container .about p{
+    font-size: 14px;
+    font-weight: 400;
+    font-family:'Raleway', sans-serif ;
+    color: #696A71;
+    margin-top: 22px;
+}
+
+/* .............footer section.............  */
+
+.footer-section{
+    background-color: #1D1F32;
+    padding-top: 29px;
+    padding-bottom: 30px;
+    
+    padding-left: 400px;
+    padding-right: 400px;
+}
+.footer-section .container{
+    width: 350px;
+    text-align: center;
+    padding-top: 29px;
+    padding-bottom: 29px;
+}
+
+.footer-section .container p{
+    color: #808080;
+    font-family:'Raleway', sans-serif ; 
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+}
+
+.footer-section .container i{
+    color: red;
+    
+}
+.footer-section .container a{
+    color:#E4E4E8;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 400;
+    font-size: 14px;
+}
+
+/* =============== responsive ==============  */
+
+
+
+/* ============Responsive Web Design============  */
+@media screen and (max-width: 912px){
+/* ============Header Section ==============  */
+
+    .header-menu{
+        display:none;
+    }
+    .menu-icon{
+        display: inline-block;
+    }
+    
+
+    /* ==========Banner Section=========== */
+    .banner-section .container-2 h1{
+        font-size:40px;
+        padding: 0 150px;
+        line-height: 50px;
+    
+    }
+    
+    .banner-section .container-2 p{
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 130px;
+    }
+
+    /* =========Team Section==========  */
+    .team-section .container{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .team-member{
+        max-width: 50%;
+        padding: 0 100px;
+    }
+    .team-member p:last-of-type{
+        font-size: 14px;
+        color: #787D84;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    .team_social-icon{
+        display: flex;
+        column-gap: 4px;
+        margin-bottom: 20px;
+    
+    }
+/* ==========Testimonial Section============  */
+
+.testimonial-content{
+    display: inline-block;
+    text-align: center;
+    
+}
+.tc-item{
+    width: 100%;
+}
+
+.testimonial-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.testimonial-text{
+    padding-top: 90px;
+    padding-left: 70px;
+}
+.testimonial-text p:first-of-type{
+    font-size: 30px;
+    padding-right:50px;
+}
+.testimonial-text p:last-of-type{
+    margin-top: 42px;
+    padding-left: 35px;
+    padding-right: 50px;
+    
+}
+
+.indicator{
+    display: flex;
+    
+    margin-top: 60px;
+    padding-left: 150px;
+    column-gap: 8px;
+   
+}
+
+    
+}
+
+@media screen and (max-width: 820px){
+    .banner-section .container-2 h1{
+        font-size:40px;
+        padding: 0 100px;
+        line-height: 50px;
+    
+    }
+    /* ==========Service Section=========  */
+    
+    .service-section .container{
+        display: flex;
+        justify-content: center; 
+        
+        
+    }
+    .service-section .container .service-card{
+        max-width:40%;
+        padding: 0 30px;
+    }
+
+    /* =========Gallery Section==========  */
+    .gallery-section{
+        justify-content: center;
+    }
+
+    .gallery-section .gallery-item{
+        max-width: 40%;
+    }
+    /* ========Testimonial Section=========  */
+    .indicator{
+        display: flex;
+        
+        margin-top: 60px;
+        padding-left: 100px;
+        column-gap: 8px;
+       
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .banner-section .container-2 a{
+    font-size: 13px;
+    padding: 18px 40px;
+    }
+
+    /* =========Gallery Section============  */
+
+    .gallery-section{
+        justify-content: center;
+    }
+
+    .gallery-section .gallery-item{
+        max-width: 40%;
+    }
+    /* =============Testimonial Section=========  */
+    .indicator{
+        display: flex;
+        
+        margin-top: 60px;
+        padding-left: 100px;
+        column-gap: 8px;
+       
+    }
+}
+
+@media screen and (max-width:540px){
+    .banner-section .container-2 h1{
+        font-size:35px;
+        padding: 0 19px;
+        line-height: 40px;
+    }
+    .banner-section .container-2 p{
+        font-size: 18px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 48px; 
+    }
+    .banner-section .container-2 a{
+        font-size: 14px;
+        padding: 15px 30px;
+    }
+
+    /* ==========Service Section ===========  */
+   
+    .service-section .container .service-card h3{
+        font-family:'Raleway', sans-serif ;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+    }
+    
+    .service-section .container .service-card p{
+        font-family:'Raleway', sans-serif ;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        padding: 0 0px;
+        color: rgb(71, 74,78) ;
+    }
+
+    /* ===========Gallery Section ============= */
+
+    .gallery-section{
+        column-gap: 5px;
+        row-gap: 5px;
+        justify-content: center;
+    }
+
+    .gallery-section .gallery-item{
+        max-width: 40%;
+        
+    }
+
+    /* =========Team Section=========  */
+    .team-section .container{
+        display:flex;
+        justify-content: center;
+        
+    }
+    .team-member{
+        max-width: 100%;
+        padding: 0px 90px;
+    }
+    .team-member p:last-of-type{
+        font-size: 14px;
+        color: #787D84;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        
+    }
+
+    .team_social-icon{
+        display: flex;
+        column-gap: 4px;
+        margin-bottom: 20px;
+    
+    }
+    /* ==========Testimonial Section===========  */
+    .indicator{
+        display: flex;
+        margin-top: 60px;
+        margin-left: 60px;
+        padding-right: 100px;
+        column-gap: 8px;
+       
+    }
+    
+    
+
+   
+    }
+
+
+
+}
+
+@media screen and (max-width:414px){
+
+    /* ==========Header section==========  */
+
+    .header-logo a img{
+        width: 85%;
+    }
+
+    .menu-icon i{
+        font-size:24px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    /* =========Banner Section ==========  */
+
+    .banner-section .container-2 h1{
+        font-size:30px;
+        padding: 0 15px;
+        line-height: 40px;
+    }
+    .banner-section .container-2 p{
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 20px; 
+    }
+    /* ===========Service Section =============  */
+    .service-section .container{
+        display: flex;
+        justify-content: space-between; 
+        
+    }
+    
+    .service-section .container .service-card{
+        max-width:100%;
+        align-items: center;
+    }
+
+    .service-section .container .service-card h3{
+        font-size: 14px;
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 25px;
+       
+    }
+    
+    .service-section .container .service-card p{
+        font-size: 14px;
+        text-align: center;
+        padding: 0 40px;
+        color: rgb(71, 74,78) ;
+    }
+
+    /* =============Gallery Section=============  */
+    .gallery-section{
+        column-gap: 1px;
+        row-gap: 1px;
+       
+    }
+    .gallery-section .gallery-item{
+        max-width: 100%;
+    }
+
+    /* ==========Testimonial Section==========  */
+    .testimonial-text{
+        padding-top: 100px;
+        padding-left: 60px;
+    }
+    
+
+}
+@media screen and (max-width:393px){
+    /* ==========Header section===========  */
+    .header-logo a img{
+        width: 75%;
+    }
+
+    .menu-icon i{
+        font-size:21px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    /* ==========Team Section==========  */
+    .team-member h3{
+        font-size: 21px;
+    }
+
+    .team_social-icon a{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width:375px){
+    /* ===========Header Section=========  */
+
+    .header-logo a img{
+        width: 70%;
+    }
+
+    .menu-icon i{
+        font-size:20px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    /* ==========Banner Section==========  */
+
+    .banner-section .container-2 h1{
+        font-size:30px;
+        padding: 0 15px;
+        line-height: 40px;
+    }
+    .banner-section .container-2 p{
+        font-size: 20px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 22px; 
+    }
+
+     /* =============Service Section==========  */
+
+     .service-section .container .service-card h3{
+        font-size: 14px;
+        text-align: center;
+        margin-top: 28px;
+        margin-bottom: 24px;
+       
+    }
+    
+    .service-section .container .service-card p{
+        font-size: 14px;
+        text-align: center;
+        padding: 0 40px;  
+    }
+    /* ==========Team Section=======  */
+    .team-member h3{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:360px){
+    .banner-section .container-2 h1{
+        font-size:28px;
+        padding: 0 15px;
+        line-height: 35px;
+    }
+    .banner-section .container-2 p{
+        font-size: 16px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 22px; 
+    }
+
+    .banner-section .container-2 a{
+        font-size: 12px;
+        padding: 15px 35px;
+    }
+}
+
+@media screen and (max-width:280px){
+    
+    /* ==========Header section==========  */
+
+    .header-logo a img{
+        width: 65%;
+    }
+
+    .menu-icon i{
+        font-size:18px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    /* =========Banner Section ==========  */
+
+    .banner-section .container-2 h1{
+        font-size:22px;
+        padding: 0 15px;
+        line-height: 28px;
+    }
+    .banner-section .container-2 p{
+        font-size: 15px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        padding: 0 17px; 
+    }
+
+    .banner-section .container-2 a{
+        font-size: 12px;
+        padding: 15px 18px;
+    }
+
+
+    /* =============Service Section============  */
+
+    .service-section .container .service-card{
+        max-width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+    .service-section .container .service-card a img{
+        width: 80%;
+    
+    }
+    
+    .service-section .container .service-card h3{
+        font-size: 13px;
+        margin-top: 24px;
+    }
+
+    /* =========Team Section===========  */
+    .team-section .container{
+        display:flex;
+        justify-content: center;
+        
+    }
+    .team-member{
+        max-width: 100%;
+        padding: 0px 10px;
+    }
+    .team-member h3{
+        font-size: 19px;
+    }
+    .team-member p:first-of-type{
+        font-size: 12px;
+    }
+    .team-member p:last-of-type{
+        font-size: 14px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        
+    }
+
+    .team_social-icon{
+        display: flex;
+        column-gap: 4px;
+        margin-bottom: 20px;
+    
+    }
+    
+}
+
+
+
+    
+
+   
+    
+  
+
+
+
+
