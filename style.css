@@ -29,6 +29,7 @@ ul li{
 }
 
 /* .........header section........... */
+
 .header-section{
     height: 100px;
     position: fixed;
@@ -84,12 +85,6 @@ ul li{
     padding-right: 0;
 }
 
-
-
-    
-
-
-
 /* ............banner section.............. */
 .banner-section{
     background-image: url(./image/background.png);
@@ -100,15 +95,17 @@ ul li{
 }
 
 .banner-section .container-2 h1{
-    font-size:65px;
+    
+    font-size: 65px;
+    padding: 0 150px;
+    line-height: 70px;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    line-height: 68px;
     text-transform: uppercase;
     text-align: center;
-    padding: 0 150px;
-
+    
+    
 }
 
 .banner-section .container-2 p{
@@ -117,9 +114,9 @@ ul li{
     font-family: 'Raleway', sans-serif;
     color: white;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 80px;
-    padding: 0 185px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding: 40px 80px;
     
 }
 
@@ -327,8 +324,6 @@ ul li{
     /* font-family: 'Cardo', serif; */
 }
 
-
-
 .testimonial-content{
     display: flex;
 }
@@ -437,7 +432,6 @@ ul li{
 }
 .about-section .container .location{
     width: 160px;
-   
     text-align: center;
     margin-left: 150px;
  }
@@ -457,7 +451,6 @@ ul li{
     }
 .about-section .container .share{
     width: 380px;
-   
     text-align: center;
     margin-left: 100px;
     
@@ -547,20 +540,99 @@ ul li{
 }
 
 /* =============== responsive ==============  */
-
-
-
 /* ============Responsive Web Design============  */
+
+@media screen and (max-width:1024px) {
+
+  /* ==========Testimonial Section===========   */
+    .testimonial-content{
+        display: flex;
+        
+    }
+    .tc-item{
+        width: 50%;
+    }
+    
+    .testimonial-text p:first-of-type{
+        font-size: 30px;
+        padding-right:50px;
+    }
+    .testimonial-text p:last-of-type{
+        margin-top: 42px;
+        padding-left: 20px;
+        padding-right: 50px;
+    }
+    
+    .indicator {
+        display: flex;
+        margin-top: 60px;
+        margin: 60px 100px;
+        padding: 0px 50px;
+        column-gap: 8px;
+    }
+    /* ===========About Section============  */
+    .about-section .container{
+        
+        width: 100%;
+        
+    }
+    .about-section .container .location{
+        height: 100px;
+        width: 130px;
+        margin-left: 80px;
+     }
+    
+     .about-section .container .share{
+        height: 100px;
+        width: 380px;
+        text-align: center;
+        margin-left: 80px;
+        
+    }
+    .about-section .container .about{
+        height: 100px;
+        width: 300px;
+      margin-right: 20px;
+    }
+
+}
+
+
+
 @media screen and (max-width: 912px){
 /* ============Header Section ==============  */
 
     .header-menu{
         display:none;
     }
-    .menu-icon{
+    .header-menu.active{
         display: inline-block;
+    } 
+    .header-menu{
+        position: relative;
+        /* top: 150px;
+        left: 310px; */
+        top: 128px;
+        left: 310px;
+        background-color: rgb(21, 23, 36);
+        opacity: 0.6;
     }
     
+    .header-menu .menu{
+        flex-direction: column;
+    }
+    .menu-icon{
+        display: inline-block;
+        margin-right: 60px;
+    }
+
+    .header-menu .menu li a{
+        padding: 8px;
+    }
+    .header-menu .menu li a:hover{
+        pointer-events: none;
+    }
+
 
     /* ==========Banner Section=========== */
     .banner-section .container-2 h1{
@@ -604,18 +676,15 @@ ul li{
 
 .testimonial-content{
     display: inline-block;
-    text-align: center;
-    
+    text-align: center;   
 }
 .tc-item{
     width: 100%;
 }
-
 .testimonial-image img{
     width: 100%;
     height: 100%;
 }
-
 .testimonial-text{
     padding-top: 90px;
     padding-left: 70px;
@@ -628,22 +697,70 @@ ul li{
     margin-top: 42px;
     padding-left: 35px;
     padding-right: 50px;
-    
 }
 
 .indicator{
     display: flex;
-    
     margin-top: 60px;
-    padding-left: 150px;
+    margin-left: 310px;
     column-gap: 8px;
-   
 }
 
+/* ==========Download Section===========  */
+.download-section .container a{
+    padding: 20px 60px;
+}
+    
+
+/* ===========About Section=========== */
+.about-section .container{
+    
+    width: 100%;
     
 }
+.about-section .container .location{
+    height: 100px;
+    width: 130px;
+    margin-left: 80px;
+ }
+
+ .about-section .container .share{
+    height: 100px;
+    width: 380px;
+    text-align: center;
+    margin-left: 90px;
+    
+}
+.about-section .container .about{
+    height: 100px;
+    width: 340px;
+    text-align: center;
+}
+/* =========Footer Section===========  */
+.footer-section{
+    padding-left: 310px;
+    padding-right: 320px;
+}
+.footer-section .container{
+    width: 400px;
+    padding-right: 100px;
+    text-align: center;
+    padding-top: 29px;
+    padding-bottom: 29px;
+}
+
+}    
+
 
 @media screen and (max-width: 820px){
+    /* ========Header Section=========== */
+    .header-menu{
+        position: relative;
+        top: 128px;
+        left: 265px;
+        background-color: rgb(21, 23, 36);
+    }
+    
     .banner-section .container-2 h1{
         font-size:40px;
         padding: 0 100px;
@@ -674,16 +791,66 @@ ul li{
     /* ========Testimonial Section=========  */
     .indicator{
         display: flex;
-        
         margin-top: 60px;
-        padding-left: 100px;
+        margin-left: 260px;
         column-gap: 8px;
        
     }
+
+    /* ==========Download section=========== */
+
+.download-section .container{
+    width: 100%;
+}
+.download-section .container h3{
+    font-size: 24px;
+}
+.download-section .container a{
+    font-size: 14px;
+    padding: 12px 50px;
+}
+
+/* ============About Section============  */
+.about-section .container .share{
+    margin-left: 80px;
+}
+
+/* =========Footer Section===========  */
+.footer-section{
+    padding-left: 220px;
+}
+.footer-section .container{
+    width: 400px;
+    padding-right: 15px;
+    
+}
+
     
 }
 
 @media screen and (max-width:768px){
+
+    /* ===========header Section=========   */
+
+    .header-menu{
+        position: relative;
+        top: 128px;
+        left: 245px;
+        background-color: rgb(21, 23, 36);
+        opacity: 0.6;
+        
+        
+    }
+    .header-menu .menu li a{
+        padding: 8px;
+        
+    }
+    .header-menu .menu li a:hover{
+        pointer-events: none;
+        
+    }
+
+    /* =========Banner Section============  */
     .banner-section .container-2 a{
     font-size: 13px;
     padding: 18px 40px;
@@ -701,15 +868,25 @@ ul li{
     /* =============Testimonial Section=========  */
     .indicator{
         display: flex;
-        
         margin-top: 60px;
-        padding-left: 100px;
+        margin-left: 240px;
         column-gap: 8px;
-       
     }
+    /* ============About Section============  */
+.about-section .container .share{
+    margin-left: 70px;
+    
+}
 }
 
 @media screen and (max-width:540px){
+
+    /* ===========Header Section==========  */
+    .header-menu{
+        left: 130px;
+    }
+  
+    /* =========Banner Section=========  */
     .banner-section .container-2 h1{
         font-size:35px;
         padding: 0 19px;
@@ -764,7 +941,10 @@ ul li{
     .team-section .container{
         display:flex;
         justify-content: center;
-        
+    }
+    .team-section .container .team-member img{
+        width: 85%;
+        height: 85%;
     }
     .team-member{
         max-width: 100%;
@@ -785,34 +965,68 @@ ul li{
     
     }
     /* ==========Testimonial Section===========  */
+    .testimonial-text {
+        padding-top: 90px;
+        padding-left: 25px 25px;
+    }
+
     .indicator{
         display: flex;
         margin-top: 60px;
-        margin-left: 60px;
-        padding-right: 100px;
+        margin-left: 120px;
+        padding-right: 0px;
         column-gap: 8px;
-       
-    }
-    
-    
-
-   
     }
 
-
-
+     /* ============About Section============  */
+.about-section .container .location{
+    height: 100px;
+    width: 130px;
+    margin-left: 30px;
 }
+
+.about-section .container .share{
+    height: 100px;
+    width: 150px;
+    margin-left: 20px;
+    padding: 0 2px;
+}
+.about-section .container .share a{
+    height: 35px;
+    width: 35px;
+    padding-top: 7px;
+    padding-left: 3px;
+}
+.about-section .container .about{
+    height: 100px;
+    width: 200px;
+    padding: 0 8px;
+}
+/* =========Footer Section===========  */
+.footer-section{
+    padding-left: 80px;
+}
+.footer-section .container{
+    width: 400px;
+    padding-right: 15px;
+}
+
+
+    }
 
 @media screen and (max-width:414px){
 
     /* ==========Header section==========  */
+    .header-menu{
+        left: 80px;
+    }
 
     .header-logo a img{
-        width: 85%;
+        width: 70%;
     }
 
     .menu-icon i{
-        font-size:24px;
+        font-size:22px;
         font-weight: 700;
         color: #fff;
     }
@@ -830,6 +1044,10 @@ ul li{
         margin-bottom: 50px;
         padding: 0 20px; 
     }
+    .banner-section .container-2 a {
+        font-size: 14px;
+        padding: 13px 25px;
+    }
     /* ===========Service Section =============  */
     .service-section .container{
         display: flex;
@@ -840,6 +1058,7 @@ ul li{
     .service-section .container .service-card{
         max-width:100%;
         align-items: center;
+        padding: 0px 5px;
     }
 
     .service-section .container .service-card h3{
@@ -853,7 +1072,8 @@ ul li{
     .service-section .container .service-card p{
         font-size: 14px;
         text-align: center;
-        padding: 0 40px;
+        padding: 0 50px;
+        
         color: rgb(71, 74,78) ;
     }
 
@@ -868,23 +1088,96 @@ ul li{
     }
 
     /* ==========Testimonial Section==========  */
+    
+    .testimonial-image img{
+        width: 100%;
+        height: 100%;
+    }
     .testimonial-text{
         padding-top: 100px;
-        padding-left: 60px;
+        padding-left: 0px;
+    }  
+    .testimonial-text p:first-of-type{
+        font-size: 30px;
     }
-    
+    .testimonial-text p:last-of-type{
+            margin-top: 42px;
+            padding-left: 0px;
+            padding-right: 50px;
+        }
+    .tc-content{
+        margin-left: 20px;
+    }
+    .indicator{
+        display: flex;
+        margin-top: 60px;
+        margin-left: 20px;
+        padding-left: 120px;
+        padding-right: 0px;
+        column-gap: 8px;
+    }
+    /* ==========Download section=========== */
+
+.download-section .container{
+    width: 100%;
+}
+.download-section .container h3{
+    font-size: 21px;
+    line-height: 35 px;
+}
+.download-section .container a{
+    font-size: 12px;
+    padding: 12px 30px;
+}
+
+/* ==============About Section===============  */
+
+.about-section .container .location{
+    height: 100px;
+    margin-left: 30px;
+}
+
+.about-section .container .share{
+    height: 100px;
+    width: 280px;
+margin-left: 15px;
+padding: 0 2px;
+}
+.about-section .container .about{
+    height: 100px;
+    width: 300px;
+padding: 0 10px;
 
 }
+.about-section .container .share a {
+    align-items: center;
+	height: 28px;
+	width: 28px;
+	padding-top: 4px;
+}
+/* =========Footer Section===========  */
+.footer-section{
+    padding-left: 80px;
+}
+.footer-section .container{
+    width: 270px;
+    padding-right: 15px;
+}
+}
+
 @media screen and (max-width:393px){
     /* ==========Header section===========  */
     .header-logo a img{
         width: 75%;
     }
-
     .menu-icon i{
         font-size:21px;
         font-weight: 700;
         color: #fff;
+    }
+    .banner-section .container-2 a {
+        font-size: 14px;
+        padding: 13px 20px;
     }
 
     /* ==========Team Section==========  */
@@ -896,10 +1189,63 @@ ul li{
         height: 30px;
         width: 30px;
     }
+    /* ===========Testimonial Section=========== */
+    .testimonial-text p:first-of-type{
+        font-size: 28px;
+    }
+    .indicator {
+        display: flex;
+        margin-top: 60px;
+        margin-left: 20px;
+        padding-right: 0px;
+        column-gap: 8px;
+    }
+
+/* ==============About Section===============  */
+
+.about-section .container .location{
+    height: 100px;
+    margin-left: 25px;
+}
+.about-section .container .share{
+    height: 100px;
+    width: 280px;
+    margin-left: 12px;
+   
+}
+.about-section .container .about{
+    height: 100px;
+    width: 280px;
+padding: 0 0px;
+
+}
+.about-section .container .share a {
+	height: 28px;
+	width: 28px;
+    padding-left: 1px;
+	padding-top: 4px;
+}
+
+/* =========Footer Section===========  */
+.footer-section{
+    padding-left: 70px;
+}
+.footer-section .container{
+    width: 270px;
+    padding-right: 15px;
+}
+
 }
 
 @media screen and (max-width:375px){
     /* ===========Header Section=========  */
+
+    .header-menu{
+        display:none;
+    }
+    .menu-icon{
+        display: inline-block;
+    }
 
     .header-logo a img{
         width: 70%;
@@ -909,6 +1255,10 @@ ul li{
         font-size:20px;
         font-weight: 700;
         color: #fff;
+    }
+    .banner-section .container-2 a {
+        font-size: 14px;
+        padding: 11px 15px;
     }
 
     /* ==========Banner Section==========  */
@@ -944,7 +1294,26 @@ ul li{
     .team-member h3{
         font-size: 20px;
     }
+    /* ===========Testimonial Section===========  */
+
+    .testimonial-text p:first-of-type{
+        font-size: 25px;
+    }
+    .indicator{
+        padding-left: 100px;
+    }
+
+   /* =========Footer Section===========  */
+.footer-section{
+    padding-left: 60px;
 }
+.footer-section .container{
+    width: 270px;
+    padding-right: 15px;
+}
+    
+}
+
 @media screen and (max-width:360px){
     .banner-section .container-2 h1{
         font-size:28px;
@@ -962,14 +1331,42 @@ ul li{
         font-size: 12px;
         padding: 15px 35px;
     }
+
+    /* =========Testimonial Section===========  */
+    .indicator {
+        padding-left: 100px;
+        
+    }
+    /* =========Footer Section===========  */
+.footer-section{
+    padding-left: 45px;
+}
+.footer-section .container{
+    width: 270px;
+    padding-right: 15px;
+}
 }
 
 @media screen and (max-width:280px){
     
     /* ==========Header section==========  */
 
+    .header-menu{
+        
+        position: relative;
+        top: 128px;
+        left: 70px;
+        background-color: rgb(21, 23, 36);
+        opacity: 0.6;
+    }
+
     .header-logo a img{
-        width: 65%;
+        width: 60%;
+    }
+
+    .menu-icon{
+        display: inline-block;
+        margin-right: 45px;
     }
 
     .menu-icon i{
@@ -1037,17 +1434,102 @@ ul li{
         font-size: 14px;
         margin-top: 25px;
         margin-bottom: 20px;
-        
     }
 
     .team_social-icon{
         display: flex;
         column-gap: 4px;
         margin-bottom: 20px;
-    
     }
+
+    /* ==========Testimonial Section============  */
+
+.testimonial-content{
+    display: inline-block;
+    text-align: center;
     
 }
+.tc-item{
+    width: 100%;
+}
+
+.testimonial-text{
+    padding-top: 40px;
+    /* padding-left: 40px; */
+    padding-left: 5px;
+}
+.testimonial-text p:first-of-type{
+    font-size: 25px;
+    padding-left:0px;
+}
+.testimonial-text p:last-of-type{
+        font-size: 11px ;
+        padding-left: 10px;
+        padding-right: 60px;
+    }
+
+.indicator{
+    
+    padding-left: 60px;
+    /* margin-right: 20px; */
+    padding-right: 0;
+}
+
+/* ==========Download section=========== */
+
+.download-section .container{
+    width: 100%;
+}
+.download-section .container h3{
+    font-size: 20px;
+    line-height: 30px;
+}
+.download-section .container a{
+    font-size: 12px;
+    padding: 12px 30px;
+}
+
+/* =============About Section============  */
+
+.about-section .container .location{
+    height: 200px;
+    width: 130px;
+    margin-left: 5px;
+}
+.about-section .container .share{
+    height: 200px;
+    width: 280px;
+    margin-left: 5px;
+   
+}
+.about-section .container .about{
+    height: 200px;
+    width: 280px;
+    margin-left: 6px;
+padding: 0 0px;
+
+}
+.about-section .container .share a {
+	height: 21px;
+	width: 21px;
+    padding-left: 0px;
+    padding: 1px 1px;
+	padding-top: 1px;
+    margin-top: 18px;
+}
+
+/* =========Footer Section===========  */
+.footer-section{
+    padding-left: 40px;
+}
+.footer-section .container{
+    width: 210px;
+    padding-right: 15px;
+}
+}
+
+    
+
 
 
 
